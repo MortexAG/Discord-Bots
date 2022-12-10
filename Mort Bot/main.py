@@ -235,6 +235,24 @@ async def help(message):
   for command in commands:
     embedVar.add_field(name=f"{command}", value=f"{commands[command]}", inline=False)
   await message.response.send_message(embed = embedVar)
+  
+  
+ ### BE CAREFUL WITH THESE 2 COMMANDS AS THEY CAN CHANGE THE BOT'S PUBLIC NAME AND AVATAR
+  
+  # rename bot
+
+#@tree.command(name = "chname", description = "change the bot's name")
+#async def rename(interaction: discord.Interaction, name: str):
+#  await client.user.edit(username = name)
+
+
+# Change Bot Avatar
+#@tree.command(name = "chimg", description = "change the bot's avatar")
+#async def change_avatar(interaction: discord.Interaction, name: str):
+#  img = requests.get(name).content
+#  await client.user.edit(avatar = img)
+
+###
 
 # test this command accepts arguments
 
