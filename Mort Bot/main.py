@@ -236,11 +236,11 @@ async def help(message):
     embedVar.add_field(name=f"{command}", value=f"{commands[command]}", inline=False)
   await message.response.send_message(embed = embedVar)
 
-# test
+# test this command accepts arguments
 
-#@tree.command(name = "test", description = "test")
-#async def test(message):
-#  await message.response.send_message("This Server Id is ",message.guild.id)
+@tree.command(name = "test", description = "test")
+async def test(interaction: discord.Interaction, name: str):
+  await interaction.response.send_message(f"You Typed {name}")
 
 
 
