@@ -1,14 +1,14 @@
 import flask
-from flask import Flask
+from flask import Flask, render_template
 import random
 import threading
 from threading import Thread
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder = "templatefiles", static_folder= "staticfiles")
 
 @app.route('/')
 def main():
-  return "Bot Is Currently Running"
+  return render_template("index.html")
 
 def run():
   app.run(
